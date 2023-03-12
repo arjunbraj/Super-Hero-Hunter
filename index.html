@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SuperHero Hunter</title>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/77f8116414.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
+<body class="flex-col">
+    
+    <!-- NavBar -->
+    <nav class="flex-row navbar">
+        <!-- site title -->
+        <div class="flex-row navbar-brand">
+            <a href="./index.html">
+                <span>SuperHero Hunter</span>
+            </a>
+        </div>
+
+        <!-- theme and favourites button-->
+        <div class="flex-row favAndTheme-btn">
+            <button id="theme-btn" class="btn"><i class="fa-solid fa-moon"></i></button>
+            <a class="flex-row link-to-different-page" href="./favourites.html">
+                <button class="btn fav-btn"><i class="fa-solid fa-heart fav-icon"></i>&nbsp; Favourites</button>
+            </a>
+        </div>
+    </nav>
     
 </body>
 </html>
