@@ -57,3 +57,12 @@ window.addEventListener("load", function () {
      // Adding the appropritate events to the buttons after they are inserted in dom 
      addEvent();
 });
+
+// Function for attacthing eventListener to buttons
+function addEvent() {
+    let removeBtn = document.querySelectorAll(".remove-btn");
+    removeBtn.forEach((btn) => btn.addEventListener("click", removeCharacterFromFavourites))
+
+    let characterInfo = document.querySelectorAll(".character-info");
+    characterInfo.forEach((character) => character.addEventListener("click", addInfoInLocalStorage));
+}
