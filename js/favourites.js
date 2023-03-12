@@ -108,3 +108,20 @@ function removeCharacterFromFavourites() {
          document.querySelector(".remove-toast").setAttribute("data-visiblity", "hide");
     }, 1000);
 }
+
+function addInfoInLocalStorage() {
+    // This function basically stores the data of character in localStorage.
+    // When user clicks on the info button and when the info page is opened that page fetches the heroInfo and display the data  
+    let heroInfo = {
+         name: this.parentElement.children[7].children[1].innerHTML,
+         description: this.parentElement.children[7].children[5].innerHTML,
+         comics: this.parentElement.children[7].children[2].innerHTML,
+         series: this.parentElement.children[7].children[3].innerHTML,
+         stories: this.parentElement.children[7].children[4].innerHTML,
+         portraitImage: this.parentElement.children[7].children[7].innerHTML,
+         id: this.parentElement.children[7].children[0].innerHTML,
+         landscapeImage: this.parentElement.children[7].children[6].innerHTML
+    }
+
+    localStorage.setItem("heroInfo", JSON.stringify(heroInfo));
+}
