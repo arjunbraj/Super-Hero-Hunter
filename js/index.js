@@ -20,4 +20,15 @@ async function searchHeroes(textSearched){
     let Private_Key = 'ac76bbd5a45201d2168ef0988b374f2a7532d740';
     let ts = new Date().getTime();
     let hash = MD5(ts + Private_Key + Public_Key).toString();
+
+    // if no text in search bar
+    if(textSearched.length == 0){
+        searchResults.innerHTML = '';
+        return;
+    }
+
+    // get the data from Marvel API
+    await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${textSearched}&apikey=${Public_Key}&hash=${hash}?ts=${ts}`)
+    .then(res => res.json())
+    .then(data => showSearchedResults(data.data.results));
 }
