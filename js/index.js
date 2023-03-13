@@ -5,8 +5,9 @@
 // ac76bbd5a45201d2168ef0988b374f2a7532d740
 
 // importing cryptoJS for creation of hash
-const MD5 = require('crypto-js/md5')
+// import MD5 from 'crypto-js/md5';
 
+// let MD5 = require('crypto-js/md5');
 // getting the elements from document
 let searchBar = document.getElementById('search-bar');
 let searchResults = document.getElementById('search-results');
@@ -19,12 +20,13 @@ async function searchHeroes(textSearched){
     let Public_Key = '8ef3c799dfb791ffe453fdf363f2b764';
     let Private_Key = 'ac76bbd5a45201d2168ef0988b374f2a7532d740';
     let ts = new Date().getTime();
-    let hash = MD5(ts + Private_Key + Public_Key).toString();
+     // let ts = 1;
+    let hash = CryptoJS.MD5(ts + Private_Key + Public_Key).toString();
 
     // if no text in search bar
     if(textSearched.length == 0){
         searchResults.innerHTML = '';
-        return;
+     //    return;
     }
 
     // get the data from Marvel API
