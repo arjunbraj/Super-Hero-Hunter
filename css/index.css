@@ -6,10 +6,10 @@
 
 :root{
     /* Light Mode Colors */
-    --background-light-color: #A0E4CB;
-    --navbar-light-background-color: #59C1BD;
-    --navbar-light-color: #0D4C92;
-    --searchBar-light-box-shadow: #0D4C92;
+    --background-light-color: white;
+    --navbar-light-background-color: black;
+    --navbar-light-color: #338bed;
+    --searchBar-light-box-shadow: black;
     --text-light-color: #000;
     
     /* Dark Mode Colors */
